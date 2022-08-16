@@ -90,4 +90,3 @@ public final class Main {
         return Resource.newResource(webRoot);
     }
 }
-
