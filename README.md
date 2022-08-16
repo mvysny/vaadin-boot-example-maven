@@ -3,7 +3,7 @@
 
 # Vaadin 23 running in Embedded Jetty
 
-A demo project showing the possibility of running a Vaadin 14 app from an
+A demo project showing the possibility of running a Vaadin 23 app from an
 embedded Jetty, as a simple `main()` method.
 
 Both the development and production modes are supported. Also, the project
@@ -51,8 +51,8 @@ The project packages itself in two ways:
 
 1. As a flatten uberjar (a jar with all dependencies unpacked inside, which you can simply launch with `java -jar`).
    Please read below regarding inherent issues with flat uberjars.
-   The deployable file is in `target/vaadin14-embedded-jetty-1.0-SNAPSHOT-uberjar.jar`
-2. As a zip file with dependencies. The file is in `target/vaadin14-embedded-jetty-1.0-SNAPSHOT-zip.zip`
+   The deployable file is in `target/vaadin-embedded-jetty-1.0-SNAPSHOT-uberjar.jar`
+2. As a zip file with dependencies. The file is in `target/vaadin-embedded-jetty-1.0-SNAPSHOT-zip.zip`
 
 ## Running in production mode
 
@@ -60,13 +60,13 @@ To build&run the flat uberjar:
 
 1. `mvn -C clean package -Pproduction`
 2. `cd target`
-3. `java -jar vaadin14-embedded-jetty-1.0-SNAPSHOT-uberjar.jar`
+3. `java -jar vaadin-embedded-jetty-1.0-SNAPSHOT-uberjar.jar`
 
 To build&run the zip file:
 
 1. `mvn -C clean package -Pproduction`
 2. `cd target`
-3. `unzip vaadin14-embedded-jetty-1.0-SNAPSHOT-zip.zip`
+3. `unzip vaadin-embedded-jetty-1.0-SNAPSHOT-zip.zip`
 4. `./run`
 
 Head to [localhost:8080/](http://localhost:8080).
@@ -107,7 +107,7 @@ Let's look at all files that this project is composed of, and what are the point
 
 ## Heroku Integration
 
-See the [Live Demo of the app running on Heroku](https://vaadin14-embedded-jetty.herokuapp.com/).
+See the [Live Demo of the app running on Heroku](https://vaadin-embedded-jetty.herokuapp.com/).
 
 To integrate with Heroku, you need to activate the `production` Maven profile
 which packages Vaadin in production mode
