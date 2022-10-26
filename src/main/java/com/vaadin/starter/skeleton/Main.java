@@ -33,9 +33,7 @@ public final class Main {
         // Therefore, we'll use a combination of the two.
 
         // this gets called both when CTRL+C is pressed, and when main() terminates.
-        Runtime.getRuntime().addShutdownHook(new Thread(() -> {
-            stop("Shutdown hook called, shutting down");
-        }));
+        Runtime.getRuntime().addShutdownHook(new Thread(() -> stop("Shutdown hook called, shutting down")));
         System.out.println("Press ENTER or CTRL+C to shutdown");
         // Await for Enter.  ./gradlew run offers no stdin and read() will return immediately with -1
         if (System.in.read() == -1) {
