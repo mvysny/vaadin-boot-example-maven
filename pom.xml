@@ -17,8 +17,6 @@
         <failOnMissingWebXml>false</failOnMissingWebXml>
 
         <vaadin.version>23.2.6</vaadin.version>
-        <!-- don't use Jetty 11+ - uses jakarta.Servlet instead of javax.Servlet which makes it incompatible with Vaadin -->
-        <jetty.version>10.0.11</jetty.version>
     </properties>
 
     <repositories>
@@ -52,6 +50,12 @@
                 </exclusion>
             </exclusions>
         </dependency>
+        <!-- Vaadin Boot which runs Vaadin apps from main() function easily: https://github.com/mvysny/vaadin-boot -->
+        <dependency>
+            <groupId>com.github.mvysny.vaadin-boot</groupId>
+            <artifactId>vaadin-boot</artifactId>
+            <version>10.0</version>
+        </dependency>
 
         <!-- Added to provide logging output as Vaadin uses -->
         <!-- the unbound SLF4J no-operation (NOP) logger implementation -->
@@ -64,18 +68,6 @@
             <groupId>javax.servlet</groupId>
             <artifactId>javax.servlet-api</artifactId>
             <version>4.0.1</version>
-        </dependency>
-
-        <!-- Embedded Jetty dependencies -->
-        <dependency>
-            <groupId>org.eclipse.jetty</groupId>
-            <artifactId>jetty-webapp</artifactId>
-            <version>${jetty.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.eclipse.jetty.websocket</groupId>
-            <artifactId>websocket-javax-server</artifactId>
-            <version>${jetty.version}</version>
         </dependency>
 
         <!-- Fast Vaadin unit-testing with Karibu-Testing: https://github.com/mvysny/karibu-testing -->
