@@ -1,5 +1,5 @@
 [![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/vaadin-flow/Lobby#?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
-[![Gitpod Ready-to-Code](https://img.shields.io/badge/Gitpod-Ready--to--Code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/mvysny/vaadin-embedded-jetty)
+[![Gitpod Ready-to-Code](https://img.shields.io/badge/Gitpod-Ready--to--Code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/mvysny/vaadin-boot-example-maven)
 
 # Vaadin 23 running in Embedded Jetty using Maven
 
@@ -11,9 +11,9 @@ demoes packaging itself both into a flatten uberjar and a zip file containing
 a list of jars and a runner script. See "Packaging for production" below
 for more details.
 
-> Looking for **Vaadin 23 Gradle** version? See [vaadin-embedded-jetty-gradle](https://github.com/mvysny/vaadin-embedded-jetty-gradle)
+> Looking for **Vaadin 23 Gradle** version? See [vaadin-boot-example-gradle](https://github.com/mvysny/vaadin-boot-example-gradle)
 
-> Looking for **Vaadin 14 Maven** version? See [vaadin14-embedded-jetty](https://github.com/mvysny/vaadin14-embedded-jetty)
+> Looking for **Vaadin 14 Maven** version? See [vaadin14-boot-example-maven](https://github.com/mvysny/vaadin14-boot-example-maven)
 
 # Documentation
 
