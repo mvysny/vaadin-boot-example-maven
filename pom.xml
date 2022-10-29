@@ -54,7 +54,7 @@
         <dependency>
             <groupId>com.github.mvysny.vaadin-boot</groupId>
             <artifactId>vaadin-boot</artifactId>
-            <version>10.0</version>
+            <version>10.1</version>
         </dependency>
 
         <!-- Added to provide logging output as Vaadin uses -->
@@ -62,12 +62,6 @@
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-simple</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>javax.servlet</groupId>
-            <artifactId>javax.servlet-api</artifactId>
-            <version>4.0.1</version>
         </dependency>
 
         <!-- Fast Vaadin unit-testing with Karibu-Testing: https://github.com/mvysny/karibu-testing -->
