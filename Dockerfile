@@ -1,8 +1,8 @@
 # Allows you to run this app easily as a docker container.
 # See README.md for more details.
 #
-# 1. Build the image with: docker build --no-cache -t test/vaadin-embedded-jetty:latest .
-# 2. Run the image with: docker run --rm -ti -p8080:8080 test/vaadin-embedded-jetty
+# 1. Build the image with: docker build --no-cache -t test/vaadin-boot-example-maven:latest .
+# 2. Run the image with: docker run --rm -ti -p8080:8080 test/vaadin-boot-example-maven
 #
 # Uses Docker Multi-stage builds: https://docs.docker.com/build/building/multi-stage/
 
