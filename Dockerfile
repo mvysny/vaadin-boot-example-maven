@@ -7,7 +7,8 @@
 # Uses Docker Multi-stage builds: https://docs.docker.com/build/building/multi-stage/
 
 # The "Build" stage. Copies the entire project into the container, into the /app/ folder, and builds it.
-FROM openjdk:11 AS BUILD
+FROM eclipse-temurin:17 AS BUILD
+RUN apt update && apt install unzip -y
 COPY . /app/
 WORKDIR /app/
 RUN ./mvnw -C clean test package -Pproduction
@@ -18,7 +19,7 @@ RUN unzip *.zip -d app/
 # /app/target/app/ folder.
 
 # The "Run" stage. Start with a clean image, and copy over just the app itself, omitting gradle, npm and any intermediate build files.
-FROM openjdk:11
+FROM eclipse-temurin:17
 COPY --from=BUILD /app/target/app /app/
 WORKDIR /app/
 EXPOSE 8080
