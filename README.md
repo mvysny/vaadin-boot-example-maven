@@ -15,6 +15,8 @@ for more details.
 
 > Looking for **Vaadin 14 Maven** version? See [vaadin14-boot-example-maven](https://github.com/mvysny/vaadin14-boot-example-maven)
 
+See the live demo at [v-herd.eu/vaadin-boot-example-maven/](https://v-herd.eu/vaadin-boot-example-maven/)
+
 # Documentation
 
 Please see the [Vaadin Boot](https://github.com/mvysny/vaadin-boot#preparing-environment) documentation
