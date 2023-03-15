@@ -113,7 +113,6 @@
                         </manifest>
                     </archive>
                     <descriptors>
-                        <descriptor>src/main/assembly/uberjar.xml</descriptor>
                         <descriptor>src/main/assembly/zip.xml</descriptor>
                     </descriptors>
                 </configuration>
