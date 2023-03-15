@@ -21,4 +21,3 @@ See the live demo at [v-herd.eu/vaadin-boot-example-maven/](https://v-herd.eu/va
 
 Please see the [Vaadin Boot](https://github.com/mvysny/vaadin-boot#preparing-environment) documentation
 on how you run, develop and package this Vaadin-Boot-based app.
-
