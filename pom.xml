@@ -102,7 +102,7 @@
             </plugin>
 
 
-            <!-- creates both the "zip" and "uberjar" distributions -->
+            <!-- creates the "zip" distribution -->
             <plugin>
                 <artifactId>maven-assembly-plugin</artifactId>
                 <version>3.2.0</version>
