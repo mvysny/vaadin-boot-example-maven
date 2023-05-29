@@ -19,7 +19,7 @@ RUN unzip *.zip -d app/
 # /app/target/app/ folder.
 
 # The "Run" stage. Start with a clean image, and copy over just the app itself, omitting gradle, npm and any intermediate build files.
-FROM eclipse-temurin:17
+FROM eclipse-temurin:20
 COPY --from=BUILD /app/target/app /app/
 WORKDIR /app/
 EXPOSE 8080
