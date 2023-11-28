@@ -65,7 +65,7 @@
         <dependency>
             <groupId>com.github.mvysny.vaadin-boot</groupId>
             <artifactId>vaadin-boot</artifactId>
-            <version>12.1</version>
+            <version>12.2</version>
         </dependency>
 
         <!-- Added to provide logging output as Vaadin uses -->
