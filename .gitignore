@@ -13,4 +13,4 @@
 .project
 
 # The following files are generated/updated by vaadin-maven-plugin
-frontend/generated
+src/main/frontend/generated
