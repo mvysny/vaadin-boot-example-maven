@@ -10,11 +10,11 @@
     <packaging>jar</packaging>
 
     <properties>
-        <maven.compiler.source>17</maven.compiler.source>
-        <maven.compiler.target>17</maven.compiler.target>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <vaadin.version>24.4.7</vaadin.version>
+        <vaadin.version>23.4.1</vaadin.version>
     </properties>
 
     <repositories>
@@ -65,7 +65,7 @@
         <dependency>
             <groupId>com.github.mvysny.vaadin-boot</groupId>
             <artifactId>vaadin-boot</artifactId>
-            <version>12.3</version>
+            <version>10.6</version>
         </dependency>
 
         <!-- Added to provide logging output as Vaadin uses -->
@@ -78,8 +78,8 @@
         <!-- Fast Vaadin unit-testing with Karibu-Testing: https://github.com/mvysny/karibu-testing -->
         <dependency>
             <groupId>com.github.mvysny.kaributesting</groupId>
-            <artifactId>karibu-testing-v24</artifactId>
-            <version>2.1.5</version>
+            <artifactId>karibu-testing-v23</artifactId>
+            <version>1.4.2</version>
             <scope>test</scope>
         </dependency>
         <dependency>
