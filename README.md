@@ -15,7 +15,7 @@ for more details.
 
 > Looking for **Vaadin 14 Maven** version? See [vaadin14-boot-example-maven](https://github.com/mvysny/vaadin14-boot-example-maven)
 
-> Looking for **Vaadin 23 Gradle** version? Please see the [v23 branch](../../tree/v23).
+> Looking for **Vaadin 23 Maven** version? Please see the [v23 branch](../../tree/v23).
 
 See the live demo at [v-herd.eu/vaadin-boot-example-maven/](https://v-herd.eu/vaadin-boot-example-maven/)
 
