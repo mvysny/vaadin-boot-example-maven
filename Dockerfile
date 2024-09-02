@@ -23,5 +23,4 @@ FROM openjdk:21-bookworm
 COPY --from=BUILD /app/target/app /app/
 WORKDIR /app/
 EXPOSE 8080
-ENTRYPOINT ./run
-
+ENTRYPOINT ./bin/app
