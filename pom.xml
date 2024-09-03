@@ -128,8 +128,6 @@
                 <artifactId>appassembler-maven-plugin</artifactId>
                 <version>2.1.0</version>
                 <configuration>
-                    <repositoryName>lib</repositoryName>
-                    <repositoryLayout>flat</repositoryLayout>
                     <programs>
                         <program>
                             <mainClass>com.vaadin.starter.skeleton.Main</mainClass>
