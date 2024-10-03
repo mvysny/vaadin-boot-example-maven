@@ -21,6 +21,14 @@ import java.util.concurrent.Future;
 public class MainView extends VerticalLayout {
 
     private final Span statusSpan = new Span();
+    /**
+     * These jobs are meant to be short-running and confined to this view. When the user reloads the page or exits
+     * the view, the jobs are canceled.
+     * <br/>
+     * Long-running jobs (which are possibly tied to the user who committed them)
+     * would not update the UI - instead the UI would probably actively poll the jobs
+     * for status. Such jobs are not implemented in this example app though.
+     */
     private final List<Future<?>> backgroundJobs = new ArrayList<>();
 
     public MainView() {
