@@ -5,10 +5,7 @@ import com.github.mvysny.kaributesting.v10.Routes;
 import com.vaadin.flow.component.UI;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.textfield.TextField;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 
 import static com.github.mvysny.kaributesting.v10.LocatorJ.*;
 import static com.github.mvysny.kaributesting.v10.NotificationsKt.expectNotifications;
@@ -34,6 +31,16 @@ public class MainViewTest {
         // Running the discovery process only once per test run speeds up the test runtime considerably.
         // Discover the routes once and cache the result.
         routes = new Routes().autoDiscoverViews("com.vaadin.starter.skeleton");
+    }
+
+    @BeforeAll
+    public static void bootstrapApp() {
+        new Bootstrap().contextInitialized(null);
+    }
+
+    @AfterAll
+    public static void tearDownApp() {
+        new Bootstrap().contextDestroyed(null);
     }
 
     @BeforeEach
