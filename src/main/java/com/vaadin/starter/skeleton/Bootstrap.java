@@ -10,7 +10,6 @@ import org.slf4j.LoggerFactory;
 
 import java.util.Objects;
 import java.util.concurrent.*;
-import java.util.function.Consumer;
 
 /**
  * The {@link #contextInitialized(ServletContextEvent)} is called once,
@@ -21,6 +20,9 @@ import java.util.function.Consumer;
 public class Bootstrap implements ServletContextListener {
     private static final Logger log = LoggerFactory.getLogger(Bootstrap.class);
 
+    /**
+     * Runs jobs in background thread.
+     */
     private static volatile ExecutorService executorService;
 
     @Override
@@ -34,7 +36,10 @@ public class Bootstrap implements ServletContextListener {
     public void contextDestroyed(ServletContextEvent sce) {
         try {
             executorService.shutdown();
-            executorService.awaitTermination(10L, TimeUnit.SECONDS);
+            if (!executorService.awaitTermination(10L, TimeUnit.SECONDS)) {
+                // stop being nice: shutdown jobs immediately, interrupting all ongoing jobs.
+                executorService.shutdownNow();
+            }
         } catch (InterruptedException e) {
             log.error("Error while shutting down background jobs", e);
         }
