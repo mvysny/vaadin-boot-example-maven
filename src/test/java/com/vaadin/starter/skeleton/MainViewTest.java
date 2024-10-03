@@ -4,11 +4,13 @@ import com.github.mvysny.kaributesting.v10.MockVaadin;
 import com.github.mvysny.kaributesting.v10.Routes;
 import com.vaadin.flow.component.UI;
 import com.vaadin.flow.component.button.Button;
+import com.vaadin.flow.component.html.Span;
 import com.vaadin.flow.component.textfield.TextField;
 import org.junit.jupiter.api.*;
 
 import static com.github.mvysny.kaributesting.v10.LocatorJ.*;
 import static com.github.mvysny.kaributesting.v10.NotificationsKt.expectNotifications;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /**
  * In this app we employ the browserless testing technique, which allows for very quick and easy test run.
@@ -75,14 +77,17 @@ public class MainViewTest {
     }
 
     @Test
-    public void testGreeting() {
+    public void testGreeting() throws Exception {
         // simulate an user input
         _setValue(_get(TextField.class, spec -> spec.withLabel("Your name")), "Martin");
 
         // simulate a button click as if clicked by the user
-        _click(_get(Button.class, spec -> spec.withText("Say hello")));
+        _click(_get(Button.class, spec -> spec.withText("Run background thread")));
 
-        // check that the notification has been shown
-        expectNotifications("Hello Martin");
+        MockVaadin.clientRoundtrip();
+        Thread.sleep(100L);
+        MockVaadin.clientRoundtrip();
+
+        assertEquals("Started job Martin! Thinking", _get(Span.class, spec -> spec.withId("status")).getText());
     }
 }

@@ -24,6 +24,8 @@ public class MainView extends VerticalLayout {
     private final List<Future<?>> backgroundJobs = new ArrayList<>();
 
     public MainView() {
+        statusSpan.setId("status");
+
         // Use TextField for standard text input
         TextField textField = new TextField("Your name");
         textField.addClassName("bordered");
