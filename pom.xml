@@ -14,7 +14,7 @@
         <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <vaadin.version>24.5.3</vaadin.version>
+        <vaadin.version>24.5.7</vaadin.version>
     </properties>
 
     <repositories>
@@ -144,7 +144,7 @@
                     </execution>
                 </executions>
             </plugin>
-            <!-- creates the "zip" distribution -->
+            <!-- creates the "zip" distribution out of the app that appassembler produced -->
             <plugin>
                 <artifactId>maven-assembly-plugin</artifactId>
                 <version>3.2.0</version>
