@@ -1,7 +1,7 @@
 # Allows you to run this app easily as a docker container.
 # See README.md for more details.
 #
-# 1. Build the image with: docker build --no-cache -t test/vaadin-boot-example-maven:latest .
+# 1. Build the image with: docker build -t test/vaadin-boot-example-maven:latest .
 # 2. Run the image with: docker run --rm -ti -p8080:8080 -m256m test/vaadin-boot-example-maven
 #
 # Uses Docker Multi-stage builds: https://docs.docker.com/build/building/multi-stage/
@@ -10,7 +10,7 @@
 FROM eclipse-temurin:17 AS BUILD
 COPY . /app/
 WORKDIR /app/
-RUN ./mvnw -C -e clean package -Pproduction
+RUN --mount=type=cache,target=/root/.m2 ./mvnw -C -e clean package -Pproduction
 WORKDIR /app/target/
 RUN ls -la
 RUN mkdir app && tar xvzf *.tar.gz -C app
