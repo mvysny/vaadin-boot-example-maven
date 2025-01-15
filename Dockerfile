@@ -10,7 +10,7 @@
 FROM eclipse-temurin:17 AS BUILD
 COPY . /app/
 WORKDIR /app/
-RUN --mount=type=cache,target=/root/.m2 ./mvnw -C -e clean package -Pproduction
+RUN --mount=type=cache,target=/root/.m2 --mount=type=cache,target=/root/.vaadin ./mvnw -C -e clean package -Pproduction
 WORKDIR /app/target/
 RUN ls -la
 RUN mkdir app && tar xvzf *.tar.gz -C app
