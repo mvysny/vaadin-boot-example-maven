@@ -1,5 +1,5 @@
 # Allows you to run this app easily as a docker container.
-# See README.md for more details.
+# See README.md for more details. Requires docker buildx/buildkit.
 #
 # 1. Build the image with: docker build -t test/vaadin-boot-example-maven:latest .
 # 2. Run the image with: docker run --rm -ti -p8080:8080 -m256m test/vaadin-boot-example-maven
