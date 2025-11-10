@@ -17,7 +17,7 @@ RUN mkdir app && tar xvzf *.tar.gz -C app
 # /app/target/app/ folder.
 
 # The "Run" stage. Start with a clean image, and copy over just the app itself, omitting gradle, npm and any intermediate build files.
-FROM openjdk:21-bookworm
+FROM eclipse-temurin:21
 COPY --from=builder /app/target/app /app/
 WORKDIR /app/
 EXPOSE 8080
