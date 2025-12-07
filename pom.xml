@@ -79,7 +79,7 @@
         <dependency>
             <groupId>com.github.mvysny.kaributesting</groupId>
             <artifactId>karibu-testing-v24</artifactId>
-            <version>2.4.2</version>
+            <version>2.4.3</version>
             <scope>test</scope>
         </dependency>
         <dependency>
@@ -122,7 +122,7 @@
                 </executions>
             </plugin>
 
-            <!-- creates an executable app -->
+            <!-- creates apomn executable app -->
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>appassembler-maven-plugin</artifactId>
