@@ -7,7 +7,7 @@
 # Uses Docker Multi-stage builds: https://docs.docker.com/build/building/multi-stage/
 
 # The "Build" stage. Copies the entire project into the container, into the /app/ folder, and builds it.
-FROM eclipse-temurin:17 AS builder
+FROM eclipse-temurin:21 AS builder
 COPY . /app/
 WORKDIR /app/
 RUN --mount=type=cache,target=/root/.m2 --mount=type=cache,target=/root/.vaadin ./mvnw -C -e clean package -Pproduction
