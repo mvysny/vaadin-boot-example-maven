@@ -1,0 +1,6 @@
+#!/bin/bash
+set -e -o pipefail
+BASE_DIR=$(dirname "$0")/..
+cd $BASE_DIR/lib
+CLASSPATH=$(ls|tr '\n' ':')
+java -cp "$CLASSPATH" com.vaadin.starter.skeleton.Main "$@"

@@ -7,11 +7,23 @@
         <format>tar.gz</format>
     </formats>
     <includeBaseDirectory>false</includeBaseDirectory>
+    <!-- Include scripts in bin/ and make them executable -->
     <fileSets>
         <fileSet>
-            <directory>target/appassembler</directory>
-            <outputDirectory>/</outputDirectory>
-            <fileMode>0755</fileMode>
+            <directory>${project.basedir}/src/main/scripts</directory> <!-- Where your script templates are -->
+            <outputDirectory>bin</outputDirectory>
+            <fileMode>0755</fileMode> <!-- Executable permissions -->
         </fileSet>
     </fileSets>
+   <!-- Copy dependencies to lib/, excluding vaadin-dev ones -->
+    <dependencySets>
+        <dependencySet>
+            <outputDirectory>lib</outputDirectory>
+            <unpack>false</unpack>
+            <useTransitiveFiltering>true</useTransitiveFiltering>
+            <excludes>
+                <exclude>com.vaadin:vaadin-dev</exclude>
+            </excludes>
+        </dependencySet>
+    </dependencySets> 
 </assembly>
