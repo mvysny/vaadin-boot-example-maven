@@ -12,7 +12,7 @@
         <maven.compiler.target>21</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <vaadin.version>25.1.6</vaadin.version>
+        <vaadin.version>25.2.1</vaadin.version>
     </properties>
 
     <repositories>
@@ -38,6 +38,14 @@
 
     <dependencyManagement>
         <dependencies>
+            <!-- Imported before vaadin-bom so the aligned JUnit versions win (vaadin-bom pins an older junit-jupiter). -->
+            <dependency>
+                <groupId>org.junit</groupId>
+                <artifactId>junit-bom</artifactId>
+                <type>pom</type>
+                <scope>import</scope>
+                <version>6.1.1</version>
+            </dependency>
             <dependency>
                 <groupId>com.vaadin</groupId>
                 <artifactId>vaadin-bom</artifactId>
@@ -87,8 +95,7 @@
         </dependency>
         <dependency>
             <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter-engine</artifactId>
-            <version>6.1.0</version>
+            <artifactId>junit-jupiter</artifactId>
             <scope>test</scope>
         </dependency>
 
